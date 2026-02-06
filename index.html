@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Digital Battery Passport Prototype</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <img src="./assets/usn.png" class="logo">
+
+  <div class="title">
+    <h1>Digital Battery Passport Production-ready MVP</h1>
+    <p>
+      <b>Company:</b> Nordic Batteries<br>
+      <b>Student:</b> Manis<br>
+      <b>Period:</b> Jan–May 2026
+    </p>
+  </div>
+
+  <img src="./assets/nordic.png" class="logo">
+</div>
+
+<hr>
+
+<h2>📊 Project Plan</h2>
+<p>
+This Excel file shows the full project timeline, tasks, milestones, and dependencies.
+It provides an overview of planned activities across all phases of the thesis.
+</p>
+
+<a class="button"
+href="https://1drv.ms/x/c/430c5207b520dd75/IQBtLnbatHnlTIGsFVQPGITmAamdZvpgdI9gqR86qi0utg4?e=uedU23"
+target="_blank">
+Open Live Project Plan (Excel – Read Only)
+</a>
+
+<hr>
+
+<h2>📁 Project Phases Overview</h2>
+<p>
+This table summarizes the current status of each thesis phase and provides direct access to
+the latest documents stored on OneDrive. Supervisors can follow progress and review material here.
+</p>
+
+<table>
+
+<tr>
+<th>Phase</th>
+<th>Documents (OneDrive)</th>
+<th>Status</th>
+<th>(NB & USN) Supervisor Feedback</th>
+</tr>
+
+<tr>
+<td>Phase 1 – Project Initiation & Alignment</td>
+<td>
+<a href="https://1drv.ms/w/c/430c5207b520dd75/IQBEiYUaWmdAQ5RAWotG--IgAa3uXCf6neG_bSQavmw-8qE?e=9Rezap" target="_blank">📄 Open</a>
+</td>
+<td class="inprogress">In Progress</td>
+<td>
+<textarea id="fb1" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 1 – Project Initiation & Alignment', fb1.value)">Send</button>
+</td>
+</tr>
+
+<tr>
+<td>Phase 2 – Literature Review & Regulatory Analysis</td>
+<td>
+<a href="https://1drv.ms/w/c/430c5207b520dd75/IQDzFq8_jdyfTogtzcxSH-OQAbTVSkQ3luqJz_t42MbAjWY?e=uH7lsk" target="_blank">📄 Open</a>
+</td>
+<td class="inprogress">In Progress</td>
+<td>
+<textarea id="fb2" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 2 – Literature Review & Regulatory Analysis', fb2.value)">Send</button>
+</td>
+</tr>
+
+<tr>
+<td>Phase 3 – Requirements & MVP Specification</td>
+<td>
+<a href="https://1drv.ms/w/c/430c5207b520dd75/IQC3b3qjzTpoQLYE2bir9MkPATyO5XgoBa5Y4gfZyx0E4CQ?e=b84bJl" target="_blank">📄 Specification</a><br>
+<a href="https://1drv.ms/x/c/430c5207b520dd75/IQD_EdP_3qHkTp2k-alj3SQyATDRUNTLM3t_wTU6EEFvVLo?e=b0VGRB" target="_blank">📊 RTM</a>
+</td>
+<td class="inprogress">In Progress</td>
+<td>
+<textarea id="fb3" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 3 – Requirements & MVP Specification', fb3.value)">Send</button>
+</td>
+</tr>
+
+<tr>
+<td>Phase 4 – System & Software Design</td>
+<td>-</td>
+<td>Not Started</td>
+<td><textarea id="fb4" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 4 – System & Software Design', fb4.value)">Send</button></td>
+</tr>
+
+<tr>
+<td>Phase 5 – Backend Implementation</td>
+<td>-</td>
+<td>Not Started</td>
+<td><textarea id="fb5" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 5 – Backend Implementation', fb5.value)">Send</button></td>
+</tr>
+
+<tr>
+<td>Phase 6 – UI & Integration</td>
+<td>-</td>
+<td>Not Started</td>
+<td><textarea id="fb6" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 6 – UI & Integration', fb6.value)">Send</button></td>
+</tr>
+
+<tr>
+<td>Phase 7 – Testing & Validation</td>
+<td>-</td>
+<td>Not Started</td>
+<td><textarea id="fb7" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 7 – Testing & Validation', fb7.value)">Send</button></td>
+</tr>
+
+<tr>
+<td>Phase 8 – Documentation & Thesis Writing</td>
+<td>-</td>
+<td>Not Started</td>
+<td><textarea id="fb8" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 8 – Documentation & Thesis Writing', fb8.value)">Send</button></td>
+</tr>
+
+<tr>
+<td>Phase 9 – Finalization & Submission</td>
+<td>-</td>
+<td>Not Started</td>
+<td><textarea id="fb9" rows="2"></textarea><br>
+<button class="button small" onclick="sendFeedback('Phase 9 – Finalization & Submission', fb9.value)">Send</button></td>
+</tr>
+
+</table>
+
+<p class="updated">Last updated: 06.02.2026</p>
+
+<script>
+function sendFeedback(phase, text) {
+  if(text.trim() === "") {
+    alert("Please write feedback first.");
+    return;
+  }
+
+  const subject = encodeURIComponent("Supervisor Feedback - " + phase);
+  const body = encodeURIComponent("Phase: " + phase + "\n\nFeedback:\n" + text);
+
+  window.location.href =
+    "mailto:237229@usn.no?subject=" + subject + "&body=" + body;
+}
+</script>
+
+</body>
+</html>

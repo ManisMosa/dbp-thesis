@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  max-width: 1100px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 200px;
+}
+
+.title {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+  color: #1f3b5b;
+}
+
+hr {
+  margin: 25px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #1f7acb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.button:hover {
+  background: #155fa0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background: #f2f2f2;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.inprogress {
+  color: green;
+  font-weight: bold;
+}
+
+.updated {
+  font-style: italic;
+  color: gray;
+}
